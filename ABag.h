@@ -37,8 +37,10 @@ public:
         // Return true if found and removed, false otherwise
         for (int i = 0; i < itemCount; ++i) {
             if (data[i] == item) {
-                // Move the last item to the removed item's position
-                data[i] = data[itemCount - 1];
+                for (int j = i; j < itemCount - 1; j++) {
+                    // Move the last item to the removed item's position
+                    data[i] = data[j + 1];
+                }
                 itemCount--;
                 return true;
             }
@@ -58,15 +60,18 @@ public:
         return false;
     }
 
-    bool search(E& returnValue) const override {
-        // Search for a record using the specified key
-        // Update returnValue with the found item
-        // Return true if found, false otherwise
-        // (For simplicity, assuming "search" means finding the last item)
-        if (itemCount > 0) {
-            returnValue = data[itemCount - 1];
-            return true;
+    bool search(E& returnValue) const {
+        // Iterate through the items in the bag
+        for (int i = 0; i < itemCount; ++i) {
+            // Check if the current item matches the targetValue
+            if (data[i] == returnValue) {
+                // Update returnValue with the found item
+                returnValue = data[i];
+                // Return true, indicating the item was found
+                return true;
+            }
         }
+        // If the loop completes without finding the item, return false
         return false;
     }
 
