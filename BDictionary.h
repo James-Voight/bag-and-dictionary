@@ -49,9 +49,9 @@ public:
     }
 
     bool removeAny(E& returnValue) override {
-        // Remove any record from the dictionary
+        // Remove any record from the dictionary (in this case the top record)
         // Update returnValue with the removed item
-        // Return true if successful, false otherwise
+        // Return true if successful, false otherwise 
         KVpair<Key, E> record;
         if (dictionaryBag.removeTop(record)) {
             returnValue = record.value();
