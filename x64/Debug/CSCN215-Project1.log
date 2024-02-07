@@ -1,0 +1,7 @@
+﻿  bagtestmain.cpp
+C:\Users\james\source\repos\CSCN215-Project1\CSCN215-Project1\book.h(78,1): warning C4005: 'INFINITY': macro redefinition
+  (compiling source file 'bagtestmain.cpp')
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(88,1):
+  see previous definition of 'INFINITY'
+  
+  CSCN215-Project1.vcxproj -> C:\Users\james\source\repos\CSCN215-Project1\x64\Debug\CSCN215-Project1.exe
