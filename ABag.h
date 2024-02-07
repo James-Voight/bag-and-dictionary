@@ -9,7 +9,7 @@ template <class E>
 class ABag : public Bag<E> {
 private:
     static const int INITIAL_CAPACITY = 10;
-    std::unique_ptr<E[]> data; // Change from static array to unique_ptr
+    std::unique_ptr<E[]> data; // Changed from static array to unique_ptr
     int itemCount;
     int capacity;
 
