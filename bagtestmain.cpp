@@ -135,6 +135,34 @@ int main() {
 
 	ABag<KVpair<int, string>> myBag; //Used to test bag functions not previously demonstrated
 
+	// Print the bag's capacity
+	cout << "Bag Capacity: " << myBag.bagCapacity() << endl;
+	
+	// Example of using inspectTop (cleared)
+	KVpair<int, string> topItem;
+	if (myBag.inspectTop(topItem)) {
+		cout << "Top of the bag: " << topItem.key() << ", " << topItem.value() << endl;
+	}
+	else {
+		cout << "The bag is empty." << endl;
+	}
+
+	//Add Items to demostrate inspectTop with values
+	   // Insert some values into the bag
+	KVpair<int, string> item1(1, "Alice");
+	KVpair<int, string> item2(2, "Bob");
+
+	myBag.addItem(item1);
+	myBag.addItem(item2);
+	cout << "\nAdded 2 Items" << endl;
+
+	if (myBag.inspectTop(topItem)) {
+		cout << "Top of the bag: " << topItem.key() << ", " << topItem.value() << endl;
+	}
+	else {
+		cout << "The bag is empty." << endl;
+	}
+
 	wait();
 
 	return 0;
